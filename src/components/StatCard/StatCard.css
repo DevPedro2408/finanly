@@ -1,0 +1,88 @@
+.stat-card {
+  --tone: var(--brand);
+  --tone-soft: var(--brand-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-card--income {
+  --tone: var(--income);
+  --tone-soft: var(--income-soft);
+}
+
+.stat-card--expense {
+  --tone: var(--expense);
+  --tone-soft: var(--expense-soft);
+}
+
+.stat-card--saving {
+  --tone: var(--saving);
+  --tone-soft: var(--saving-soft);
+}
+
+.stat-card__top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-card__icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: var(--tone-soft);
+  color: var(--tone);
+}
+
+.stat-card__title {
+  min-width: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.stat-card__value {
+  overflow-wrap: anywhere;
+  font-size: clamp(1.35rem, 1.1rem + 0.7vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-card__delta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.delta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 8px 2px 6px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+}
+
+.stat-card__delta--good .delta-chip {
+  background: var(--income-soft);
+  color: var(--income);
+}
+
+.stat-card__delta--bad .delta-chip {
+  background: var(--expense-soft);
+  color: var(--expense);
+}
+
+.stat-card__footnote {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}

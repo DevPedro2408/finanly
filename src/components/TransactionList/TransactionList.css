@@ -1,0 +1,186 @@
+/* ---------- Tabela (telas largas) ---------- */
+
+/* container-type permite esconder colunas conforme a LARGURA DO CARTÃO, não da tela */
+.tx-table-wrap {
+  container-type: inline-size;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tx-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tx-table th {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.tx-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.tx-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.tx-table tbody tr:hover {
+  background: var(--surface-2);
+}
+
+.tx-table .col-amount,
+.tx-table .col-actions {
+  text-align: right;
+}
+
+.tx-table .col-actions {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.tx-date {
+  white-space: nowrap;
+  color: var(--text-muted);
+}
+
+.tx-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.tx-name__title {
+  display: block;
+  font-weight: 600;
+  overflow-wrap: break-word; /* só quebra a palavra se ela não couber de jeito nenhum */
+}
+
+.tx-table td:first-child {
+  min-width: 150px;
+}
+
+.tx-name__sub {
+  display: none;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.amount {
+  font-weight: 700;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.amount--income {
+  color: var(--income);
+}
+
+.amount--expense {
+  color: var(--text);
+}
+
+.amount.is-pending {
+  opacity: 0.65;
+}
+
+.row-actions {
+  display: inline-flex;
+  gap: 2px;
+}
+
+@container (max-width: 820px) {
+  .tx-table .col-category {
+    display: none;
+  }
+
+  .tx-table .tx-name__sub {
+    display: block;
+  }
+}
+
+@container (max-width: 680px) {
+  .tx-table .col-type {
+    display: none;
+  }
+
+  /* Espaço apertado: tira o ícone da categoria e reduz o respiro lateral para a tabela caber sem rolagem */
+  .tx-table .category-bubble {
+    display: none;
+  }
+
+  .tx-table th,
+  .tx-table td {
+    padding-inline: 8px;
+  }
+
+  .tx-table td:first-child {
+    min-width: 120px;
+  }
+}
+
+/* ---------- Cartões (celular) ---------- */
+
+.tx-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tx-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.tx-card__main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tx-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.tx-card .tx-name__sub {
+  display: block;
+}
+
+.tx-card__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.tx-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tx-card__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}

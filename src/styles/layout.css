@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Layout principal: grade sidebar + conteúdo, páginas e botão flutuante
+   Breakpoints:  > 1100px desktop  |  768–1100px tablet (sidebar compacta)  |  < 768px celular
+   ========================================================================== */
+
+.app {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.app__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.page {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 24px 32px 48px;
+}
+
+/* ---------- Botão flutuante "Nova transação" (só no celular) ---------- */
+
+.fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: var(--z-fab);
+  display: none;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--brand);
+  color: var(--brand-contrast);
+  box-shadow: var(--shadow-md);
+}
+
+.fab:hover {
+  background: var(--brand-hover);
+}
+
+/* ---------- Tablet: sidebar vira uma coluna de ícones ---------- */
+
+@media (max-width: 1100px) {
+  .app {
+    grid-template-columns: var(--rail-width) minmax(0, 1fr);
+  }
+
+  .page {
+    gap: 16px;
+    padding: 20px 24px 40px;
+  }
+}
+
+/* ---------- Celular: sidebar vira menu lateral (drawer) ---------- */
+
+@media (max-width: 767px) {
+  .app {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .page {
+    padding: 16px 16px 100px; /* espaço extra embaixo para o botão flutuante */
+  }
+
+  .fab {
+    display: grid;
+  }
+}

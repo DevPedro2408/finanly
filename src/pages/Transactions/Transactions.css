@@ -1,0 +1,35 @@
+.list-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background: var(--surface-2);
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+.list-summary strong {
+  color: var(--text);
+}
+
+.list-summary .text-income {
+  color: var(--income);
+}
+
+.list-summary .text-expense {
+  color: var(--expense);
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+@media (max-width: 479px) {
+  .load-more .btn {
+    width: 100%;
+  }
+}

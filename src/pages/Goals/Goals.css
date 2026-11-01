@@ -1,0 +1,62 @@
+.goal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.goal-card__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.goal-card__title {
+  flex: 1;
+  min-width: 0;
+}
+
+.goal-card__title h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.goal-card__title p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.goal-card__progress {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: -4px;
+}
+
+.goal-card__percent {
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.goal-card__values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+
+.goal-card__values dt {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.goal-card__values dd {
+  font-size: 0.88rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}

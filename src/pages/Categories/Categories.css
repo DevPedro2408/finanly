@@ -1,0 +1,51 @@
+.category-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.category-card__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.category-card__name {
+  margin-bottom: 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.category-card__stats {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 8px 16px;
+  margin: 0;
+}
+
+.category-card__stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.category-card__stats dt {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.category-card__stats dd {
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.category-card__share {
+  margin-top: -8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Tokens de design do Finanly
+   Todas as cores, raios e sombras ficam aqui. O tema escuro só redefine as variáveis.
+   ========================================================================== */
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --sidebar-width: 256px;
+  --rail-width: 76px;
+
+  --z-header: 20;
+  --z-fab: 30;
+  --z-overlay: 50;
+  --z-sidebar: 60;
+  --z-modal: 100;
+  --z-toast: 200;
+
+  /* ---------- Tema claro (padrão) ---------- */
+  color-scheme: light;
+
+  --bg: #f4f5f1;
+  --surface: #ffffff;
+  --surface-2: #eef1ea;
+  --border: #e1e5dd;
+  --border-strong: #c9d0c4;
+
+  --text: #0f1f1a;
+  --text-muted: #52645a;
+
+  --brand: #0e7c66;
+  --brand-hover: #0b6653;
+  --brand-contrast: #ffffff;
+  --brand-soft: #e3f4ee;
+
+  --income: #09694f;
+  --income-soft: #e3f4ee;
+  --expense: #c2391f;
+  --expense-soft: #fce9e5;
+  --saving: #3651c9;
+  --saving-soft: #e8ecfc;
+  --warning: #8a5a00;
+  --warning-soft: #fdf1d3;
+  --info: #0e5f7a;
+  --info-soft: #e0f1f7;
+  --badge-bg: #c2391f;
+
+  --focus: #1d4ed8;
+
+  --shadow-sm: 0 1px 2px rgba(15, 31, 26, 0.06);
+  --shadow-md: 0 8px 24px rgba(15, 31, 26, 0.08);
+  --shadow-lg: 0 24px 60px rgba(15, 31, 26, 0.22);
+
+  /* A sidebar é escura nos dois temas: dá identidade visual ao produto */
+  --sidebar-bg: #0f1f1a;
+  --sidebar-border: transparent;
+  --sidebar-text: #b4c6bc;
+  --sidebar-text-strong: #f1f7f3;
+  --sidebar-hover: rgba(255, 255, 255, 0.07);
+  --sidebar-active-bg: rgba(52, 211, 153, 0.16);
+  --sidebar-active: #6ee7b7;
+}
+
+/* ---------- Tema escuro ---------- */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #09100d;
+  --surface: #111a16;
+  --surface-2: #18241e;
+  --border: #22322a;
+  --border-strong: #35493e;
+
+  --text: #e8f0ea;
+  --text-muted: #9bb0a3;
+
+  --brand: #34d399;
+  --brand-hover: #5ee0b0;
+  --brand-contrast: #06241a;
+  --brand-soft: rgba(52, 211, 153, 0.14);
+
+  --income: #4ade9d;
+  --income-soft: rgba(52, 211, 153, 0.14);
+  --expense: #ff8f7a;
+  --expense-soft: rgba(255, 143, 122, 0.14);
+  --saving: #9fb1ff;
+  --saving-soft: rgba(141, 162, 251, 0.16);
+  --warning: #f5c25b;
+  --warning-soft: rgba(245, 194, 91, 0.14);
+  --info: #6cc8e4;
+  --info-soft: rgba(108, 200, 228, 0.14);
+
+  --focus: #7dd3fc;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.6);
+
+  --sidebar-bg: #0c1511;
+  --sidebar-border: #1b2a23;
+}

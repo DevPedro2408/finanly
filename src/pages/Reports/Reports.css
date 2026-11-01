@@ -1,0 +1,44 @@
+.rank-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rank-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rank-item__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.rank-item__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2px 12px;
+}
+
+.rank-item__name {
+  font-weight: 600;
+}
+
+.rank-item__value {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.rank-item__share {
+  font-weight: 500;
+  color: var(--text-muted);
+}

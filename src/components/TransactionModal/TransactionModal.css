@@ -1,0 +1,10 @@
+/* O formulário usa as classes compartilhadas (.field, .form-grid, .segmented...).
+   Aqui ficam apenas ajustes específicos do modal de transação. */
+
+.modal__form .segmented--type {
+  margin-top: 2px;
+}
+
+.modal__form .textarea {
+  min-height: 76px;
+}

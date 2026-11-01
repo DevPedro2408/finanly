@@ -1,0 +1,144 @@
+.chart {
+  margin: 0;
+}
+
+.chart__canvas {
+  position: relative;
+  height: var(--chart-height, 280px);
+  min-width: 0;
+}
+
+/* Gráficos um pouco mais baixos no celular */
+@media (max-width: 479px) {
+  .chart__canvas {
+    height: calc(var(--chart-height, 280px) * 0.82);
+  }
+}
+
+/* Recharts desenha o foco/seleção por conta própria; removemos o contorno do SVG */
+.chart__canvas svg:focus,
+.chart__canvas .recharts-wrapper:focus {
+  outline: none;
+}
+
+/* ---------- Tooltip ---------- */
+
+.chart-tooltip {
+  min-width: 170px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  font-size: 0.82rem;
+}
+
+.chart-tooltip__title {
+  margin-bottom: 6px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.chart-tooltip ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chart-tooltip li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chart-tooltip__swatch {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  border-radius: 3px;
+}
+
+.chart-tooltip__name {
+  flex: 1;
+  color: var(--text-muted);
+}
+
+/* ---------- Donut + legenda ---------- */
+
+.donut {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.donut__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.donut__center span {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.donut__center strong {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.legend li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto 44px;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.86rem;
+}
+
+.legend li:last-child {
+  border-bottom: 0;
+}
+
+.legend__swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+}
+
+.legend__name {
+  overflow: hidden;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.legend__value {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.legend__percent {
+  text-align: right;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
